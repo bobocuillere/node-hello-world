@@ -7,7 +7,7 @@ describe('Button Test', function() {
 
     before(async function() {
         driver = await new Builder().forBrowser('chrome').build();
-        await driver.get('http://localhost:7000/');
+        await driver.get('0.0.0.0:7000/');
     });
 
     it('should click the button and return "Button Clicked!"', async function() {
