@@ -11,7 +11,7 @@ headless: true,
 args: ['--no-sandbox', '--disable-setuid-sandbox'],
 });
 page = await browser.newPage();
-await page.goto('http://localhost:7000/');
+await page.goto('http://0.0.0.0:7000/');
 });
 
 it('should click the button and return "Button Clicked!"', async function() {
