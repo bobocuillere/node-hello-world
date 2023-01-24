@@ -1,12 +1,10 @@
 const { Builder, By, until } = require('selenium-webdriver');
 const assert = require('assert');
 const mocha = require('mocha');
-const puppeteer = require('puppeteer');
-
 
 describe('Button Test', function() {
     
-    let driver = await puppeteer.launch({headless: true});
+    let driver;
 
 
     before(async function() {
