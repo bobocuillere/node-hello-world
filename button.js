@@ -8,7 +8,7 @@ describe('Button Test', async function() {
   before(async function() {
     browser = await puppeteer.launch({
       headless: true,
-      executablePath: '/usr/bin/google-chrome'
+      args: ['--no-sandbox', '--disable-setuid-sandbox'],
     });
     page = await browser.newPage();
     await page.goto('http://localhost:7000/');
@@ -16,11 +16,4 @@ describe('Button Test', async function() {
 
   it('should click the button and return "Button Clicked!"', async function() {
     await page.click('input[type="submit"]');
-    const message = await page.$eval('body', el => el.innerText);
-    assert.equal(message, 'Button Clicked!');
-  });
-
-  after(async function() {
-    await browser.close();
-  });
-});
+    const message = await page.evaluate
