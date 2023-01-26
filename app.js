@@ -11,4 +11,6 @@ res.send('<html><body><h1>Bonjour, ma nouvelle feature est tout beau, tout neuve
 })
 app.post('/submit', (req, res) => {
 res.send('Button Clicked!');
-})
+});
+app.listen(port, host);
+console.log('Running on http://${host}:${port}');
