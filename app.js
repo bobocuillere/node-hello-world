@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
     res.send(`
         <html>
             <head>
-                <link rel="stylesheet" type="text/css" href="public/styles.css">
+                <link rel="stylesheet" type="text/css" href="public/style.css">
             </head>
             <body>
                 <h1>Bonjour, ma nouvelle feature est tout beau, tout neuve !</h1>
