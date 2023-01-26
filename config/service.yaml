@@ -10,7 +10,7 @@ spec:
   - name: 80-8080
     port: 80
     protocol: TCP
-    targetPort: 7000
+    targetPort: 8080
   selector:
     app: node-hello-world
   type: LoadBalancer
